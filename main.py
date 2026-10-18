@@ -24,7 +24,7 @@ for index, row in df.iterrows():
             data = file.read()
             # print(data)
         data = data.replace("[NAME]",row["name"])
-        with smtplib.SMTP("smtp.gmail.com") as connection:
+        with smtplib.SMTP("smtp.gmail.com",587) as connection:
             connection.starttls()
             connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(from_addr=MY_EMAIL,to_addrs=row["email"],msg=f"Subject:HAPPY BIRTHDAY!\n\n{data}")
