@@ -15,19 +15,19 @@ print(df)
 now = dt.datetime.now()
 cu_month = now.month
 cu_day = now.day
-letter_num = random.randint(1,3)
 
 for index, row in df.iterrows():
     if(cu_month == row["month"] and cu_day == row["day"]):
-        print(letter_num)
+        # print(letter_num)
+        letter_num = random.randint(1,3)
         with open(f"letter_templates/letter_{letter_num}.txt","r") as file:
             data = file.read()
             # print(data)
         data = data.replace("[NAME]",row["name"])
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
-            connection.login(user=USER, password=PASSWORD)
-            connection.sendmail(from_addr=USER,to_addrs=row["email"],msg=f"subject:HAPPY BIRTHDAY\n\n{data}")
+            connection.login(user=MY_EMAIL, password=MY_PASSWORD)
+            connection.sendmail(from_addr=MY_EMAIL,to_addrs=row["email"],msg=f"subject:HAPPY BIRTHDAY!\n\n{data}")
 
 
 
