@@ -27,7 +27,7 @@ for index, row in df.iterrows():
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
             connection.login(user=MY_EMAIL, password=MY_PASSWORD)
-            connection.sendmail(from_addr=MY_EMAIL,to_addrs=row["email"],msg=f"subject:HAPPY BIRTHDAY!\n\n{data}")
+            connection.sendmail(from_addr=MY_EMAIL,to_addrs=row["email"],msg=f"Subject:HAPPY BIRTHDAY!\n\n{data}")
 
 
 
