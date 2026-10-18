@@ -13,7 +13,6 @@ df = pd.read_csv("birthdays.csv")
 print(df)
 
 now = dt.datetime.now()
-cu_year = now.year
 cu_month = now.month
 cu_day = now.day
 letter_num = random.randint(1,3)
