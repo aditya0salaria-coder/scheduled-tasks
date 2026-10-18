@@ -9,8 +9,8 @@ MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 
-df = pd.read_csv("birthdays.csv")
-print(df)
+# df = pd.read_csv("birthdays.csv")
+# print(df)
 
 now = dt.datetime.now()
 cu_month = now.month
