@@ -19,7 +19,7 @@ cu_day = now.day
 letter_num = random.randint(1,3)
 
 for index, row in df.iterrows():
-    if(cu_year == row["year"] and cu_month == row["month"] and cu_day == row["day"]):
+    if(cu_month == row["month"] and cu_day == row["day"]):
         print(letter_num)
         with open(f"letter_templates/letter_{letter_num}.txt","r") as file:
             data = file.read()
