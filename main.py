@@ -15,7 +15,7 @@ df = pd.read_csv("birthdays.csv")
 now = dt.datetime.now()
 cu_month = now.month
 cu_day = now.day
-
+print(cu_day)
 for index, row in df.iterrows():
     if(cu_month == row["month"] and cu_day == row["day"]):
         # print(letter_num)
