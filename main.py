@@ -1,8 +1,8 @@
 import requests
 import os
 
-api_key = os.environ.get("OWM_API_KEY")
-
+# api_key = os.environ.get("OWM_API_KEY")
+api_key = "ef1fedb5efa7b32faec9c1be08106684"
 if not api_key:
     raise SystemExit("OWM_api_key is not set")
     
