@@ -14,7 +14,7 @@ on:
     # ║                                                                ║
     # ║  Use https://time.is/UTC to find your local time in UTC       ║
     # ╚═══════════════════════════════════════════════════════════════╝
-    - cron: '8 5 * * *'
+    - cron: '16 5 * * *'
       timezone: 'Asia/Kolkata'
 
   # This adds a "Run workflow" button so you can test manually
@@ -42,6 +42,7 @@ jobs:
         env:
           # Your secrets are available as environment variables
           # Add more secrets in Settings > Secrets > Actions
-          MY_EMAIL: ${{ secrets.MY_EMAIL }}
-          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          # MY_EMAIL: ${{ secrets.MY_EMAIL }}
+          # MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
         run: python main.py
