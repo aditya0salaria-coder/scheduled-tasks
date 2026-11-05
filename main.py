@@ -1,8 +1,11 @@
 import requests
 import os
-# api_key = "ef1fedb5efa7b32faec9c1be08106684"
+
 api_key = os.environ.get("OWM_api_key")
 
+if not api_key:
+    raise SystemExit("OWM_api_key is not set")
+    
 Own_EndPoint = "http://api.openweathermap.org/data/2.5/forecast"
 
 # print("Key loaded:", api_key is not None)
