@@ -1,7 +1,7 @@
 import requests
 import os
 
-OWM_api_key: ${{ secrets.OWM_API_KEY }}
+api_key = os.environ.get("OWM_API_KEY")
 
 if not api_key:
     raise SystemExit("OWM_api_key is not set")
